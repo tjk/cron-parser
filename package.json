@@ -43,7 +43,7 @@
   "license": "MIT",
   "dependencies": {
     "is-nan": "^1.2.1",
-    "moment-timezone": "^0.5.25"
+    "luxon": "^1.21.3"
   },
   "devDependencies": {
     "sinon": "^7.3.2",

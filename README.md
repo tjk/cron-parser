@@ -1,6 +1,8 @@
 cron-parser
 ================
 
+**This fork uses luxon instead of moment(-timezone).**
+
 [![Build Status](https://travis-ci.org/harrisiirak/cron-parser.svg?branch=master)](https://travis-ci.org/harrisiirak/cron-parser)
 [![NPM version](https://badge.fury.io/js/cron-parser.png)](http://badge.fury.io/js/cron-parser)
 
@@ -115,15 +117,10 @@ Options
 
 `currentDate` and `endDate` accept `string`, `integer` and `Date` as input.
 
-In case of using `string` as input, not every string format accepted
-by the `Date` constructor will work correctly. The supported formats are: [`ISO8601`](http://momentjs.com/docs/#/parsing/string/) and the older
-[`ASP.NET JSON Date`](http://momentjs.com/docs/#/parsing/asp-net-json-date/) format. The reason being that those are the formats accepted by the
-[`moment`](http://momentjs.com) library which is being used to handle dates.
-
 Using `Date` as an input can be problematic specially when using the `tz` option. The issue being that, when creating a new `Date` object without
 any timezone information, it will be created in the timezone of the system that is running the code. This (most of times) won't be what the user
 will be expecting. Using one of the supported `string` formats will solve the issue(see timezone example).
 
-* *iterator* - Return ES6 compatible iterator object 
+* *iterator* - Return ES6 compatible iterator object
 * *utc* - Enable UTC
 * *tz* - Timezone string. It won't be used in case `utc` is enabled
