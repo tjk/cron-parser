@@ -1,9 +1,10 @@
 {
   "name": "cron-parser",
-  "version": "2.13.0",
+  "version": "2.13.1",
   "description": "Node.js library for parsing crontab instructions",
   "main": "lib/parser.js",
   "types": "lib/index.d.ts",
+  "sideEffects": false,
   "directories": {
     "test": "test"
   },
@@ -43,7 +44,7 @@
   "license": "MIT",
   "dependencies": {
     "is-nan": "^1.2.1",
-    "luxon": "^1.21.3"
+    "luxon": "moment/luxon#72ccb8091628a4ccfcb6fe29f0ed0a521a479021"
   },
   "devDependencies": {
     "sinon": "^7.3.2",
